@@ -1,6 +1,0 @@
-<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<rect width="20" height="20" fill="#1A1A1C" fill-opacity="0.03"/>
-	<rect x="20" width="20" height="20" fill="white" fill-opacity="0.04"/>
-	<rect width="20" height="20" transform="matrix(-1 0 0 1 40 20)" fill="#1A1A1C" fill-opacity="0.03"/>
-	<rect width="20" height="20" transform="matrix(-1 0 0 1 20 20)" fill="white" fill-opacity="0.04"/>
-</svg>
