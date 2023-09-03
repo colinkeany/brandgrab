@@ -1,0 +1,21 @@
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+.sidebar {
+	width: 300px;
+	border-right: 1px solid #E3E3E9;
+	height: 100%;
+	padding: 24px;
+}
+
+.app {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1 1 auto;
+	background-color: #FFF;
+    padding: 0 80px;
+}

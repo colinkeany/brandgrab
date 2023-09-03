@@ -1,10 +1,9 @@
 .logo-builder {
   width: 100%;
-  border: 1px solid #DDD;
+  border: 1px solid #E3E3E9;
   border-radius: 6px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   display: flex;
-  margin-top: 20px;
   overflow: hidden;
 
   @media screen and (max-width: 768px) {
@@ -42,14 +41,15 @@
 
   .logo-settings {
     min-width: 300px;
-    border-left: 1px solid #DDD;
+    border-left: 1px solid #E3E3E9;
     padding: 24px;
+    background-color: #FFF;
 
     @media screen and (max-width: 768px) {
       min-width: 100%;
       width: 100%;
       border-left: 0;
-      border-top: 1px solid #DDD;
+      border-top: 1px solid #E3E3E9;
     }
 
     h5 {
