@@ -7,6 +7,14 @@
   margin-top: 20px;
   overflow: hidden;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    margin-top: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
   .logo-container {
     height: auto;
     display: flex;
@@ -16,12 +24,23 @@
     background: url('../images/bg-grid.svg') repeat;
     background-attachment: fixed;
     position: relative;
+
+    @media screen and (max-width: 768px) {
+      height: 300px;
+    }
   }
 
   .logo-settings {
     min-width: 300px;
     border-left: 1px solid #DDD;
     padding: 24px;
+
+    @media screen and (max-width: 768px) {
+      min-width: 100%;
+      width: 100%;
+      border-left: 0;
+      border-top: 1px solid #DDD;
+    }
 
     h5 {
       margin-bottom: 20px;
