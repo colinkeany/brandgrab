@@ -21,7 +21,7 @@ Using the template, you can modify the `svgData.js` file to replace the placehol
 |Name|Type|Description|
 |--|--|--|
 |`default`|boolean|Set this option to `true` on the logo that you would like to show first. This option is `false` by default.|
-|`logoSVG`|string|Add your `<svg>` code here. Ideally as a single line.|
+|`logoSVG`|string|Add your `<svg>` code here, ideally with no line breaks.|
 
 ### Manage Logo Toggles
 In the HTML, there are radio selects that represent each logo. You can modify the text label to match the logo style represented in your `svgData.js` file.
