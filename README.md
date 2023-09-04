@@ -24,21 +24,12 @@ Using the template, you can modify the `svgData.js` file to replace the placehol
 |`logoSVG`|string|Add your `<svg>` code here. Ideally as a single line.|
 
 ### Manage Logo Toggles
-In the HTML, there are radio selects that represent each logo.
+In the HTML, there are radio selects that represent each logo. You can modify the text label to match the logo style represented in your `svgData.js` file.
 ```
 <div class="form-check">
   <input class="form-check-input" type="radio" name="logoSelector" data-svg-id="logo1" id="logoOption1" checked>
   <label class="form-check-label" for="logoOption1">
     Wordmark
-  </label>
-</div>
-```
-You can modify the text label to match the logo style represented in your `svgData.js` file.
-```
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="logoSelector" data-svg-id="logo1" id="logoOption1" checked>
-  <label class="form-check-label" for="logoOption1">
-    CHANGE ME
   </label>
 </div>
 ```
