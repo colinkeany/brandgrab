@@ -7,7 +7,7 @@ BrandGrab was built to solve the tricky problem of ensuring your brand identity 
 https://colinkeany.github.io/brandgrab/
 
 ## Getting Started
-The easiest way to get started is to download the [template here](https://github.com/colinkeany/brandgrab/tree/main/src). This folder includes the HTML template which is hard-coded to pull the necessary JS and CSS from JSDelivr. The template includes placeholder options for three colors and two logo styles, but can be modified to include more or less of each option.
+The easiest way to get started is to download the [template here](https://github.com/colinkeany/brandgrab/tree/main/src). This folder includes the HTML template which is hard-coded to pull the necessary JS and CSS from JSDelivr. The template also includes `svgData.js`, which is where you'll add your different logo styles as `svg` code.
 
 ### JSDelivr
 For reference, BrandGrab source code for CSS and JS is available via JSDelivr. If you fork this repo or use the [template here](https://github.com/colinkeany/brandgrab/tree/main/src), the CSS and JS will already be available in the code.
