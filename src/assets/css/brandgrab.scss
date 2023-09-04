@@ -33,6 +33,7 @@ $blue: #0d6efd;
 
   .logo-container {
     height: auto;
+    max-height: 700px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,6 +41,7 @@ $blue: #0d6efd;
     background-size: 28px 28px;
     background-position: 0 0, 0 14px, 14px -14px, -14px 0px;
     position: relative;
+    overflow: hidden;
 
     .logo {
       display: none;
@@ -65,10 +67,11 @@ $blue: #0d6efd;
   }
 
   .logo-settings {
-    min-width: 300px;
+    width: 300px;
     border-left: 1px solid $gray-border;
     padding: 24px;
     background-color: $white;
+    flex-shrink: 0;
 
     h5 {
       margin: 0 0 20px;
@@ -159,8 +162,19 @@ $blue: #0d6efd;
         display: inline-block;
     }
 
+    .input-control {
+      width: auto;
+      padding: 8px;
+      border: 1px solid $gray-border;
+      border-radius: 6px;
+      outline: none;
+
+      &:focus {
+        border-color: $dark-gray;
+      }
+    }
+
     @media screen and (max-width: 768px) {
-      min-width: 100%;
       width: 100%;
       border-left: 0;
       border-top: 1px solid $gray-border;
@@ -168,6 +182,15 @@ $blue: #0d6efd;
 
     .options-group {
       margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .scale-option {
+      width: 50%;
+
+      input {
+        width: 100%;
+      }
     }
   }
 

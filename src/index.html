@@ -9,17 +9,17 @@
 <body>
 	<div class="logo-builder">
 		<div class="logo-container bg-white">
-			<script type="text/template" id="itemTemplate">
-				{{nameWithClassAndId}}
+			<script type="text/template" id="svgTemplate">
+				{{svgClassID}}
 			</script>
-			<div class="logo-artboard" id="renderedContent">
+			<div id="renderedContent">
 				<div class="woohoo">Copied!</div>
 			</div>
 		</div>
 		<div class="logo-settings">
 			<h5>Download Options</h5>
 			<div class="options-group" id="colorOptions">
-				<h6 class="fw-bold">Color Options</h6>
+				<h6>Color Options</h6>
 				<div class="form-check">
 					<input class="form-check-input" type="radio" name="colorOption" id="colorOptionA" data-bg-color="bg-white" data-font-color="#9C25C7" checked>
 					<label class="form-check-label" for="colorOptionA">
@@ -40,7 +40,7 @@
 				</div>
 			</div>
 			<div class="options-group">
-				<h6 class="fw-bold">Logo Style</h6>
+				<h6>Logo Style</h6>
 				<div class="form-check">
 					<input class="form-check-input" type="radio" name="logoSelector" data-svg-id="logo1" id="logoOption1" checked>
 					<label class="form-check-label" for="logoOption1">
@@ -55,7 +55,7 @@
 				</div>
 			</div>
 			<div class="options-group">
-				<h6 class="fw-bold">File Type</h6>
+				<h6>File Type</h6>
 				<div class="form-check">
 					<input class="form-check-input" type="radio" id="downloadSVG" name="downloadOption" data-btn-id="#downloadSVGBtn" checked>
 					<label class="form-check-label" for="downloadSVG">
@@ -75,6 +75,19 @@
 					</label>
 				</div>
 			</div>
+			<div class="options-group">
+				<div class="btn-group">
+					<div class="scale-option">
+						<h6>Width (px)</h6>
+						<input class="input-control" type="number" id="svgWidthInput" placeholder="Enter width in pixels">
+					</div>
+					<div class="scale-option">
+						<h6>Height (px)</h6>
+						<input class="input-control" type="number" id="svgHeightInput" placeholder="Enter height in pixels">
+					</div>
+				</div>
+			</div>
+
 			<div class="btn-group">
 				<button class="btn btn-primary download-btn" id="downloadSVGBtn">Download SVG</button>
 				<button class="btn btn-primary download-btn" id="downloadPNGBtn" style="display: none;">Download PNG</button>

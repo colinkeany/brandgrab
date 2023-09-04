@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		var serializer = new XMLSerializer();
 		var source = '<?xml version="1.0" standalone="no"?>\r\n' + serializer.serializeToString(svg);
 
-		var scale = 5; // 5x the original size
+		var scale = 1; // 5x the original size
 
 		var canvas = document.createElement("canvas");
 		canvas.width = svg.clientWidth * scale;
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	        let id = "logo" + (index + 1);
 	        
 	        // Insert the class and ID into the SVG inside logoSVG
-	        item.nameWithClassAndId = item.logoSVG.replace('<svg', `<svg id="${id}" class="${classList}"`);
+	        item.svgClassID = item.logoSVG.replace('<svg', `<svg id="${id}" class="${classList}"`);
 	        
 	        for (let key in item) {
 	            result = result.replace(new RegExp(`{{${key}}}`, 'g'), item[key]);
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	// Get the template content
-	var template = document.getElementById('itemTemplate').textContent;
+	var template = document.getElementById('svgTemplate').textContent;
 
 	// Render content
     var renderedItems = render(template, data);
@@ -169,6 +169,13 @@ document.addEventListener('DOMContentLoaded', function() {
     renderedItems.forEach(item => {
         contentDiv.innerHTML += item;
     });
+
+    // Event listeners for width and height inputs
+    document.getElementById('svgWidthInput').addEventListener('input', updateSVGDimensions);
+    document.getElementById('svgHeightInput').addEventListener('input', updateSVGDimensions);
+
+    // Initialize the input fields with the currentSVG dimensions
+    initializeInputsWithCurrentSVGDimensions();
 
     const radios = document.querySelectorAll('input[name="logoSelector"]');
     const svgs = document.querySelectorAll('.logo');
@@ -185,7 +192,56 @@ document.addEventListener('DOMContentLoaded', function() {
             const associatedSvg = document.getElementById(svgId);
             if (associatedSvg) {
                 associatedSvg.classList.add('currentSVG');
+
+                // Update the input fields to reflect the dimensions of the newly selected SVG
+                document.getElementById('svgWidthInput').value = associatedSvg.getAttribute('width');
+                document.getElementById('svgHeightInput').value = associatedSvg.getAttribute('height');
             }
         });
     });
 });
+
+function initializeInputsWithCurrentSVGDimensions() {
+    let svgElement = document.querySelector('.currentSVG');
+
+    // Get the current SVG dimensions
+    let svgWidth = svgElement.getAttribute('width');
+    let svgHeight = svgElement.getAttribute('height');
+
+    // Populate the width and height input fields
+    document.getElementById('svgWidthInput').value = svgWidth;
+    document.getElementById('svgHeightInput').value = svgHeight;
+}
+
+function updateSVGDimensions() {
+    let svgElement = document.querySelector('.currentSVG');
+
+    // Calculate the original width-to-height ratio
+    let svgWidth = parseFloat(svgElement.getAttribute('width'));
+    let svgHeight = parseFloat(svgElement.getAttribute('height'));
+    let originalRatio = svgWidth / svgHeight;
+
+    // Get the input values
+    let newWidth = parseFloat(document.getElementById('svgWidthInput').value);
+    let newHeight = parseFloat(document.getElementById('svgHeightInput').value);
+
+    if (!newWidth || isNaN(newWidth) || !newHeight || isNaN(newHeight)) {
+        document.getElementById('svgWidthInput').value = svgWidth;
+        document.getElementById('svgHeightInput').value = svgHeight;
+        return; // exit the function if either input is cleared
+    }
+
+    if (this.id === 'svgWidthInput') {
+        // Width was changed, so adjust height
+        newHeight = newWidth / originalRatio;
+        document.getElementById('svgHeightInput').value = newHeight.toFixed(2);
+    } else {
+        // Height was changed, so adjust width
+        newWidth = newHeight * originalRatio;
+        document.getElementById('svgWidthInput').value = newWidth.toFixed(2);
+    }
+
+    // Update SVG dimensions
+    svgElement.setAttribute('width', newWidth);
+    svgElement.setAttribute('height', newHeight);
+}
