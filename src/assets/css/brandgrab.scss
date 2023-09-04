@@ -4,6 +4,7 @@
 $white: #FFFFFF;
 $black: #000000;
 $dark-gray: #1A1A1C;
+$text: $dark-gray;
 $gray-border: #E3E3E9;
 $blue: #0d6efd;
 
@@ -13,6 +14,7 @@ $blue: #0d6efd;
 
 * {
   font-family: 'Inter', sans-serif;
+  color: $text;
 }
 
 .logo-builder {
@@ -133,7 +135,7 @@ $blue: #0d6efd;
         margin-left: -1.5em;
         width: 1em;
         height: 1em;
-        margin-right: 0.25em;
+        margin-right: 0.35em;
         vertical-align: top;
         -webkit-appearance: none;
         -moz-appearance: none;

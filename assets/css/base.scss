@@ -21,3 +21,13 @@ html, body {
 		padding: 0;
 	}
 }
+
+.app {
+	.logo-builder {
+		transition: box-shadow 0.2s ease;
+	}
+}
+
+#downloadApp:hover + .app .logo-builder {
+	box-shadow: 0 0 0 6px limegreen;
+}
