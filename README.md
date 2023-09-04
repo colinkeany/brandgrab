@@ -2,7 +2,9 @@
 ![brandgrab-demo](https://github.com/colinkeany/brandgrab/assets/4369448/1384317b-443b-4b65-81f2-ee612e5d51dc)
 
 ## What is BrandGrab?
-Add BrandGrab to your existing brand guidelines page to give visitors an easy-to-use interface for customizing and downloading your logos.
+BrandGrab was built to solve the tricky problem of ensuring your brand identity is represented accurately across the internet. Using BrandGrab, you can control which versions of your logo are available to use, with options for logo variations (wordmark, glyph, etc.) and colors. Visitors will have the options to download your logo as an SVG, PNG or JPG as well as copy the SVG to the clipboard to be used in design software or code.
+
+https://colinkeany.github.io/brandgrab/
 
 ## Getting Started
 The easiest way to get started is to download the [template here](https://github.com/colinkeany/brandgrab/tree/main/src). This folder includes the HTML template which is hard-coded to pull the necessary JS and CSS from JSDeliver. The template includes placeholder options for three colors and two logo styles, but can be modified to include more or less of each option.
