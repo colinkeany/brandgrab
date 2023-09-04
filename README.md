@@ -7,16 +7,24 @@ BrandGrab was built to solve the tricky problem of ensuring your brand identity 
 https://colinkeany.github.io/brandgrab/
 
 ## Getting Started
-The easiest way to get started is to download the [template here](https://github.com/colinkeany/brandgrab/tree/main/src). This folder includes the HTML template which is hard-coded to pull the necessary JS and CSS from JSDeliver. The template includes placeholder options for three colors and two logo styles, but can be modified to include more or less of each option.
+The easiest way to get started is to download the [template here](https://github.com/colinkeany/brandgrab/tree/main/src). This folder includes the HTML template which is hard-coded to pull the necessary JS and CSS from JSDelivr. The template includes placeholder options for three colors and two logo styles, but can be modified to include more or less of each option.
 
-### JSDeliver
+### JSDelivr
+For reference, BrandGrab source code for CSS and JS is available via JSDelivr. If you fork this repo or use the [template here](https://github.com/colinkeany/brandgrab/tree/main/src), the CSS and JS will already be available in the code.
 ```
 https://cdn.jsdelivr.net/gh/colinkeany/brandgrab@latest/src/assets/css/brandgrab.css
 https://cdn.jsdelivr.net/gh/colinkeany/brandgrab@latest/src/assets/js/brandgrab.1.0.js
 ```
 
-### Adding My Logo(s)
-If you're using the template to get started, there will be two logo style options by default. 
+### Adding Logo Data
+Using the template, you can modify the `svgData.js` file to replace the placeholder logos with your own.
+|Name|Type|Description|
+|--|--|--|
+|`default`|boolean|Set this option to `true` on the logo that you would like to show first. This option is `false` by default.|
+|`logoSVG`|string|Add your `<svg>` code here. Ideally as a single line.|
+
+### Manage Logo Toggles
+In the HTML, there are radio selects that represent each logo.
 ```
 <div class="form-check">
   <input class="form-check-input" type="radio" name="logoSelector" data-svg-id="logo1" id="logoOption1" checked>
@@ -24,10 +32,13 @@ If you're using the template to get started, there will be two logo style option
     Wordmark
   </label>
 </div>
+```
+You can modify the text label to match the logo style represented in your `svgData.js` file.
+```
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="logoSelector" data-svg-id="logo2" id="logoOption2">
-  <label class="form-check-label" for="logoOption2">
-    Glyph
+  <input class="form-check-input" type="radio" name="logoSelector" data-svg-id="logo1" id="logoOption1" checked>
+  <label class="form-check-label" for="logoOption1">
+    CHANGE ME
   </label>
 </div>
 ```
