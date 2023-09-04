@@ -24,6 +24,14 @@
     background-position: 0 0, 0 14px, 14px -14px, -14px 0px;
     position: relative;
 
+    .logo {
+      display: none;
+    }
+
+    .currentSVG {
+        display: block;
+    }
+
     &.bg-white {
       background-color: #FFF;
       background-image: linear-gradient(45deg, rgba(26,26,28,0.03) 25%, transparent 25%), linear-gradient(-45deg, rgba(26,26,28,0.03) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgba(26,26,28,0.03) 75%), linear-gradient(-45deg, transparent 75%, rgba(26,26,28,0.03) 75%);

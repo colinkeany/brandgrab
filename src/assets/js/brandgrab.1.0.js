@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			container.classList.add(bgColor);
 		});
 
-		var logoPaths = document.querySelectorAll('.vantage-logo path');
+		var logoPaths = document.querySelectorAll('.logo path');
 		logoPaths.forEach(function(path) {
 			path.style.fill = fontColor;
 		});
@@ -21,35 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	colorOptions.forEach(function(option) {
 		option.addEventListener('change', setColor);
 	});
-
-	// Function to handle the logo type change.
-	function handleLogoTypeChange(event) {
-		if (event.target.checked) {
-			var showClass, hideClass;
-			if (event.target.id === 'logoGlyph') {
-				showClass = 'vantage-glyph';
-				hideClass = 'vantage-wordmark';
-			} else {
-				showClass = 'vantage-wordmark';
-				hideClass = 'vantage-glyph';
-			}
-			
-			var showElement = document.querySelector('.' + showClass);
-			var hideElement = document.querySelector('.' + hideClass);
-			
-			showElement.style.display = 'block';
-			showElement.classList.add('currentSVG');
-
-			hideElement.style.display = 'none';
-			hideElement.classList.remove('currentSVG');
-			
-			// Since the logo type changed, reset the colors.
-			setColor();
-		}
-	}
-
-	document.getElementById('logoGlyph').addEventListener('change', handleLogoTypeChange);
-	document.getElementById('logoWordmark').addEventListener('change', handleLogoTypeChange);
 
 	document.querySelectorAll('input[name="downloadOption"]').forEach(function(option) {
 		option.addEventListener('change', function(event) {
@@ -76,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		// Create a temporary link to trigger the download
 		var link = document.createElement('a');
 		link.href = URL.createObjectURL(blob);
-		link.download = "vantage-logo.svg";
+		link.download = "logo.svg";
 		document.body.appendChild(link);
 		link.click();
 
@@ -111,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 			var quality = format === "jpeg" ? 0.9 : undefined; // Set desired quality for JPEG
 			var mimeType = "image/" + format;
-			var fileName = 'vantage-logo.' + format;
+			var fileName = 'logo.' + format;
 
 			var imgURL = canvas.toDataURL(mimeType, quality);
 
@@ -163,4 +134,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		}, 100);
 	});
+
+    const radios = document.querySelectorAll('input[name="logoSelector"]');
+    const svgs = document.querySelectorAll('.logo');
+
+    radios.forEach(radio => {
+        radio.addEventListener('change', function() {
+            // Remove the 'currentSVG' class from all SVGs
+            svgs.forEach(svg => {
+                svg.classList.remove('currentSVG');
+            });
+
+            // Add the 'currentSVG' class to the associated SVG
+            const svgId = this.getAttribute('data-svg-id');
+            const associatedSvg = document.getElementById(svgId);
+            if (associatedSvg) {
+                associatedSvg.classList.add('currentSVG');
+            }
+        });
+    });
 });
