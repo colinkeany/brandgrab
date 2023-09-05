@@ -19,12 +19,12 @@ https://cdn.jsdelivr.net/gh/colinkeany/brandgrab@latest/src/assets/js/brandgrab.
 ```
 
 ### Adding Logo Data
-Using the template, you can modify the `svgData.js` file to replace the placeholder logos with your own.
+Using the template, you can modify the `svgData.js` file to swap out the placeholder logos with your own.
 |Name|Type|Description|
 |--|--|--|
 |`default`|boolean|Set this option to `true` on the logo that you would like to show first. This option is `false` by default.|
 |`logoSVG`|string|Add your `<svg>` code here, ideally with no line breaks.|
-|`label`|string|Create a label for the type of logo. For example, `Wordmark`, `Glyph`, `Stacked`, etc.|
+|`label`|string|A label describes the type of logo. For example, `Wordmark`, `Glyph`, `Stacked`, etc.|
 ```
 var data = [
     {
