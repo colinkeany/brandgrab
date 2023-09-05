@@ -2,7 +2,9 @@
 ![brandgrab-demo](https://github.com/colinkeany/brandgrab/assets/4369448/1384317b-443b-4b65-81f2-ee612e5d51dc)
 
 ## What is BrandGrab?
-BrandGrab was built to solve the tricky problem of ensuring your brand identity is represented accurately across the internet. Using BrandGrab, you can control which versions of your logo are available for download. Control the end result by only supplying visitors with your most up-to-date logo(s) and preferred colors. Visitors will have the options to download your logo as an SVG, PNG or JPG as well as copy the SVG to the clipboard to be used in design software or code.
+BrandGrab gives your visitors an easy-to-use interface for customizing and downloading your logos.
+
+It was built to solve the tricky problem of ensuring your brand identity is represented accurately across the internet. Using BrandGrab, you can control which versions of your logo are available for download. Control the end result by only supplying visitors with your most up-to-date logo(s) and preferred colors. Visitors will have the options to download your logo as an SVG, PNG or JPG as well as copy the SVG to clipboard to be used in their design software or code.
 
 **Live Demo:** https://colinkeany.github.io/brandgrab/
 
