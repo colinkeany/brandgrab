@@ -8,6 +8,24 @@ body {
 	display: flex;
 }
 
+.ph-banner {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+
+	@media screen and (max-width: 768px) {
+		display: none;
+
+		&.mobile {
+			display: block;
+			margin: 40px 0 0;
+			position: relative;
+			top: 0;
+			right: 0;
+		}
+	}
+}
+
 #main {
 	background-color: #FFF;
 	max-width: 900px;
@@ -20,6 +38,10 @@ body {
 		margin-bottom: 40px;
 		display: block;
 
+		@media screen and (max-width: 768px) {
+			padding: 0 20px;
+		}
+
 		p {
 			&:last-child {
 				margin-bottom: 0;
@@ -27,9 +49,21 @@ body {
 		}
 	}
 
+	.iframe-section {
+		@media screen and (max-width: 768px) {
+			box-shadow: 0 0 0 8px #F1F4F6 inset;
+			margin: 20px 20px 40px;
+		}
+	}
+
 	iframe {
 		padding: 0;
 		margin: 0;
+		height: 600px;
+
+		@media screen and (max-width: 768px) {
+			height: 880px;
+		}
 	}
 
 	pre {
@@ -52,6 +86,6 @@ body {
 
 	@media screen and (max-width: 768px) {
 		margin: 0;
-		padding: 0;
+		padding: 40px 0;
 	}
 }
