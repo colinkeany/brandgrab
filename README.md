@@ -36,3 +36,36 @@ var data = [
     }
 ];
 ```
+
+### Managing Colors
+Customizing colors and color labels is simple!
+
+Use `data-font-color` to change the color of the SVG logo.
+ - For example, `data-font-color="#000000"` will change the logo black
+
+Use `data-bg-color` to change the background color of the logo container.
+ - `data-bg-color="bg-white"` for darker colored logos
+ - `data-bg-color="bg-dark"` for lighter colored logos
+
+```
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="colorOption" id="colorOptionA" data-bg-color="bg-white" data-font-color="#9C25C7" checked>
+    <label class="form-check-label" for="colorOptionA">
+        Purple
+    </label>
+</div>
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="colorOption" id="colorOptionB" data-bg-color="bg-dark" data-font-color="#FFFFFF">
+    <label class="form-check-label" for="colorOptionB">
+        White
+    </label>
+</div>
+```
+
+
+
+
+
+
+
+
