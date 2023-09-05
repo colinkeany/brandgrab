@@ -4,7 +4,7 @@
 ## What is BrandGrab?
 BrandGrab gives your visitors an easy-to-use interface for customizing and downloading your logos.
 
-It was built to solve the tricky problem of ensuring your brand identity is represented accurately across the internet. Using BrandGrab, you can control which versions of your logo are available for download. Control the end result by only supplying visitors with your most up-to-date logo(s) and preferred colors. Visitors will have the options to download your logo as an SVG, PNG or JPG as well as copy the SVG to clipboard to be used in their design software or code.
+It was built to solve the tricky problem of ensuring your brand identity is represented accurately across the internet. Using BrandGrab, you can control which versions of your logo are available for download. Control the end result by only supplying visitors with your most up-to-date logo(s) and preferred colors. Visitors will have the option to download your logo as an SVG, PNG or JPG as well as copy the SVG to clipboard to be used in their design software or code.
 
 **Live Demo:** https://colinkeany.github.io/brandgrab/
 
@@ -18,7 +18,7 @@ It was built to solve the tricky problem of ensuring your brand identity is repr
 - [License](#license)
 
 ## Getting Started
-The easiest way to get started is to download the [latest release](https://github.com/colinkeany/brandgrab/releases). This folder includes the HTML template which is hard-coded to pull the necessary JS and CSS from JSDelivr. The template also includes `svgData.js`, which is where you'll add your different logo styles as `svg` code.
+The easiest way to get started is to download the [latest release](https://github.com/colinkeany/brandgrab/releases). The folder includes the HTML template which is hard-coded to pull the necessary JS and CSS from JSDelivr. The template also includes `svgData.js`, which is where you'll add your different logo styles as `svg` code.
 
 ### JSDelivr
 For reference, BrandGrab source code for CSS and JS is available via JSDelivr. If you fork this repo or download the [latest release](https://github.com/colinkeany/brandgrab/releases), the CSS and JS will already be available in the code.
