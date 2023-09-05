@@ -29,6 +29,9 @@ https://cdn.jsdelivr.net/gh/colinkeany/brandgrab@latest/src/assets/js/brandgrab.
 
 ### Adding Logo Data
 Using the template, you can modify the `svgData.js` file to swap out the placeholder logos with your own.
+
+<img width="886" alt="image" src="https://github.com/colinkeany/brandgrab/assets/4369448/97fde3af-035e-4ec2-8c86-4a11affa90af">
+
 |Name|Type|Description|
 |--|--|--|
 |`default`|boolean|Set this option to `true` on the logo that you would like to show first. This option is `false` by default.|
