@@ -18,10 +18,10 @@ It was built to solve the tricky problem of ensuring your brand identity is repr
 - [License](#license)
 
 ## Getting Started
-The easiest way to get started is to download the [template here](https://github.com/colinkeany/brandgrab/tree/main/src). This folder includes the HTML template which is hard-coded to pull the necessary JS and CSS from JSDelivr. The template also includes `svgData.js`, which is where you'll add your different logo styles as `svg` code.
+The easiest way to get started is to download the [latest release](https://github.com/colinkeany/brandgrab/releases). This folder includes the HTML template which is hard-coded to pull the necessary JS and CSS from JSDelivr. The template also includes `svgData.js`, which is where you'll add your different logo styles as `svg` code.
 
 ### JSDelivr
-For reference, BrandGrab source code for CSS and JS is available via JSDelivr. If you fork this repo or use the [template here](https://github.com/colinkeany/brandgrab/tree/main/src), the CSS and JS will already be available in the code.
+For reference, BrandGrab source code for CSS and JS is available via JSDelivr. If you fork this repo or download the [latest release](https://github.com/colinkeany/brandgrab/releases), the CSS and JS will already be available in the code.
 ```
 https://cdn.jsdelivr.net/gh/colinkeany/brandgrab@latest/src/assets/css/brandgrab.css
 https://cdn.jsdelivr.net/gh/colinkeany/brandgrab@latest/src/assets/js/brandgrab.1.0.js
