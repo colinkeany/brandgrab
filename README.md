@@ -63,7 +63,7 @@ Customizing colors and color labels is simple! Define the color of the logo, and
 ```
 
 ## Contributing
-For more info on how to contribute please see the [contribution guidelines]('#').
+For more info on how to contribute please see the  [contribution guidelines](https://github.com/colinkeany/brandgrab/blob/main/CONTRIBUTING.md).
 
 Found a bug or would like to request a feature? Feel free to [open an issue](https://github.com/colinkeany/brandgrab/issues/new) outlining your request.
 
