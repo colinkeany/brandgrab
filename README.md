@@ -62,10 +62,10 @@ Customizing colors and color labels is simple! Define the color of the logo, and
 </div>
 ```
 
+## Contributing
+For more info on how to contribute please see the [contribution guidelines]('#').
 
+Found a bug or would like to request a feature? Feel free to [open an issue](https://github.com/colinkeany/brandgrab/issues/new) outlining your request.
 
-
-
-
-
-
+## License
+BrandGrab is licensed under the [MIT License](https://github.com/colinkeany/brandgrab/blob/main/LICENSE).
