@@ -22,25 +22,17 @@ Using the template, you can modify the `svgData.js` file to replace the placehol
 |--|--|--|
 |`default`|boolean|Set this option to `true` on the logo that you would like to show first. This option is `false` by default.|
 |`logoSVG`|string|Add your `<svg>` code here, ideally with no line breaks.|
+|`label`|string|Create a label for the type of logo. For example, `Wordmark`, `Glyph`, `Stacked`, etc.|
 ```
 var data = [
     {
         default: true,
-        logoSVG: '<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="30" r="30" fill="#FF0000"/></svg>'
+        logoSVG: '<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="30" r="30" fill="#FF0000"/></svg>',
+        label: 'Wordmark'
     },
     {
-        logoSVG: '<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="20" fill="#0038FF"/></svg>'
+        logoSVG: '<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="20" fill="#0038FF"/></svg>',
+        label: 'Glyph'
     }
 ];
-```
-
-### Manage Logo Toggles
-In the HTML, there are radio selects that represent each logo. You can modify the text label to match the logo style represented in your `svgData.js` file.
-```
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="logoSelector" data-svg-id="logo1" id="logoOption1" checked>
-  <label class="form-check-label" for="logoOption1">
-    Wordmark
-  </label>
-</div>
 ```
