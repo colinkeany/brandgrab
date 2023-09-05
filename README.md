@@ -38,24 +38,22 @@ var data = [
 ```
 
 ### Managing Colors
-Customizing colors and color labels is simple!
+Customizing colors and color labels is simple! Define the color of the logo, and whether or not it should be presented on a light or dark artboard.
 
-Use `data-font-color` to change the color of the SVG logo.
- - For example, `data-font-color="#000000"` will change the logo black
-
-Use `data-bg-color` to change the background color of the logo container.
- - `data-bg-color="bg-white"` for darker colored logos
- - `data-bg-color="bg-dark"` for lighter colored logos
+|Attribute Name|Description|
+|--|--|
+|`data-font-color`|The color you set here will be applied to the SVG logo on select. This allows any color code. For example, `#000`, `rgba(0,0,0,1)` or `black` are all valid.|
+|`data-bg-color`|Use this to switch the artboard to light or dark mode, depending on the logo color set by `data-font-color`. Options include `bg-white` and `bg-dark`.|
 
 ```
 <div class="form-check">
-    <input class="form-check-input" type="radio" name="colorOption" id="colorOptionA" data-bg-color="bg-white" data-font-color="#9C25C7" checked>
+    <input data-font-color="#000000" data-bg-color="bg-white" class="form-check-input" type="radio" name="colorOption" id="colorOptionA" checked>
     <label class="form-check-label" for="colorOptionA">
-        Purple
+        Black
     </label>
 </div>
 <div class="form-check">
-    <input class="form-check-input" type="radio" name="colorOption" id="colorOptionB" data-bg-color="bg-dark" data-font-color="#FFFFFF">
+    <input data-font-color="#FFFFFF" data-bg-color="bg-dark" class="form-check-input" type="radio" name="colorOption" id="colorOptionB">
     <label class="form-check-label" for="colorOptionB">
         White
     </label>
