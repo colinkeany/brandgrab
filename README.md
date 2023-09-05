@@ -8,6 +8,15 @@ It was built to solve the tricky problem of ensuring your brand identity is repr
 
 **Live Demo:** https://colinkeany.github.io/brandgrab/
 
+## Table of contents
+
+- [Getting Started](#getting-started)
+  - [JSDelivr](#jsdelivr)
+  - [Adding Logo Data](#adding-logo-data)
+  - [Managing Colors](#managing-colors)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## Getting Started
 The easiest way to get started is to download the [template here](https://github.com/colinkeany/brandgrab/tree/main/src). This folder includes the HTML template which is hard-coded to pull the necessary JS and CSS from JSDelivr. The template also includes `svgData.js`, which is where you'll add your different logo styles as `svg` code.
 
