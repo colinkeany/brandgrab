@@ -41,20 +41,14 @@
 						</label>
 					</div>
 				</div>
-				<div class="options-group">
+				<script type="text/template" id="labelTemplate">
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="logoSelector" data-svg-id="logo{{labelID}}" id="logoOption{{labelID}}" checked>
+						<label class="form-check-label" for="logoOption{{labelID}}">{{label}}</label>
+					</div>
+				</script>
+				<div class="options-group" id="renderedStyles">
 					<h6>Logo Style</h6>
-					<div class="form-check">
-						<input class="form-check-input" type="radio" name="logoSelector" data-svg-id="logo1" id="logoOption1" checked>
-						<label class="form-check-label" for="logoOption1">
-							Wordmark
-						</label>
-					</div>
-					<div class="form-check">
-						<input class="form-check-input" type="radio" name="logoSelector" data-svg-id="logo2" id="logoOption2">
-						<label class="form-check-label" for="logoOption2">
-							Glyph
-						</label>
-					</div>
 				</div>
 				<div class="options-group">
 					<h6>File Type</h6>

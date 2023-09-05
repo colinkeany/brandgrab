@@ -154,40 +154,58 @@ document.addEventListener('DOMContentLoaded', function() {
 		}, 100);
 	});
 
-	// Simple function to replace placeholders with actual data
-	function render(template, data) {
-		return data.map((item, index) => {
-			let result = template;
+    // Simple function to replace placeholders with actual data
+    function render(template, data) {
+        return data.map((item, index) => {
+            let result = template;
 
-			// Construct the class list
-			let classList = "logo";
+            // Construct the class list
+            let classList = "logo";
+            if (item.default) {
+                classList += " currentSVG";
+            }
+
+            // Add the incremental ID
+            let id = "logo" + (index + 1);
+            
+            // Insert the class and ID into the SVG inside logoSVG
+            item.svgClassID = item.logoSVG.replace('<svg', `<svg id="${id}" class="${classList}"`);
+
+            item.labelID = (index + 1);
+
 			if (item.default) {
-				classList += " currentSVG";
+			    result = result.replace('checked', 'checked="checked"');
+			} else {
+			    result = result.replace(' checked', ''); // Remove the checked attribute for non-default items
 			}
 
-			// Add the incremental ID
-			let id = "logo" + (index + 1);
-			
-			// Insert the class and ID into the SVG inside logoSVG
-			item.svgClassID = item.logoSVG.replace('<svg', `<svg id="${id}" class="${classList}"`);
+            for (let key in item) {
+                result = result.replace(new RegExp(`{{${key}}}`, 'g'), item[key]);
+            }
 
-			for (let key in item) {
-				result = result.replace(new RegExp(`{{${key}}}`, 'g'), item[key]);
-			}
+            return result;
+        });
+    }
 
-			return result;
-		});
-	}
+    // Fetch the SVG template content
+    var svgTemplate = document.getElementById('svgTemplate').textContent;
 
-	// Get the template content
-	var template = document.getElementById('svgTemplate').textContent;
+    // Render SVG content
+    var renderedSVGs = render(svgTemplate, data);
+    var contentDiv = document.getElementById('renderedContent');
+    renderedSVGs.forEach(svg => {
+        contentDiv.innerHTML += svg;
+    });
 
-	// Render content
-	var renderedItems = render(template, data);
-	var contentDiv = document.getElementById('renderedContent');
-	renderedItems.forEach(item => {
-		contentDiv.innerHTML += item;
-	});
+    // Fetch the label template content
+    var labelTemplate = document.getElementById('labelTemplate').textContent;
+
+    // Render labels
+    var renderedLabels = render(labelTemplate, data);
+    var stylesDiv = document.getElementById('renderedStyles');
+    renderedLabels.forEach(label => {
+        stylesDiv.innerHTML += label;
+    });
 
 	// Event listeners for width and height inputs
 	document.getElementById('svgWidthInput').addEventListener('input', updateSVGDimensions);
